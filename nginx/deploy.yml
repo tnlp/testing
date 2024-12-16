@@ -1,4 +1,4 @@
-# deployment.yaml
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -21,7 +21,6 @@ spec:
         ports:
         - containerPort: 80
 ---
-# service.yaml
 apiVersion: v1
 kind: Service
 metadata:
@@ -33,4 +32,3 @@ spec:
   - protocol: TCP
     port: 80
     targetPort: 80
-  type: LoadBalancer
